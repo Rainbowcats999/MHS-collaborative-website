@@ -6,6 +6,9 @@
         "requirements": ["", ""],
         "exp": ["", ""],
         "description": "",
-        "blurb": ""
+        "blurb": "",
+        "datePosted": ["", "", ""],
+        "timeCommitment": ["", ""],
+        "eventDate": ["", "", ""]
     }
 ]
