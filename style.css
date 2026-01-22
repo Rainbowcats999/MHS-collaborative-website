@@ -89,17 +89,17 @@ body {
 
 /* CENTERED CONTAINER (THIS IS IMPORTANT) */
 .nav-inner {
-    max-width: 1400px;          /* controls wireframe width */
-    margin: 0 auto;
-    padding: 0 40px;
-
     display: flex;
     align-items: center;
+    justify-content: space-between;  /* pushes logo left, menu right, links centered */
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
 }
 
 /* LOGO */
 .logo img {
-    height: 40px;
+    height: 100px;
     width: auto;
 }
 
@@ -138,6 +138,11 @@ body {
         height: 32px;
     }
 }
+
+.logo {
+    margin-left: 40px;  /* adjusts distance from left edge */
+}
+
 
 
 
