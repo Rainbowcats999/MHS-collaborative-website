@@ -80,3 +80,64 @@ body {
     gap: 350px;
     margin: 0 auto;     
 }
+
+/* NAVBAR */
+.navbar {
+    background: #3b5f9e;
+    padding: 20px 0;
+}
+
+/* CENTERED CONTAINER (THIS IS IMPORTANT) */
+.nav-inner {
+    max-width: 1400px;          /* controls wireframe width */
+    margin: 0 auto;
+    padding: 0 40px;
+
+    display: flex;
+    align-items: center;
+}
+
+/* LOGO */
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+/* NAV LINKS — WIREFRAME SPACING */
+.nav-links {
+    display: flex;
+    margin: 0 auto;
+    gap: clamp(40px, 8vw, 240px);   /* 👈 BIG spacing */
+}
+
+.nav-links a {
+    color: yellow;
+    text-decoration: none;
+    font-size: clamp(15px, 1.8vw, 18px);
+    white-space: nowrap;
+}
+
+/* MENU ICON */
+.menu-icon {
+    display: none;
+    font-size: 26px;
+    color: yellow;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .logo img {
+        height: 32px;
+    }
+}
+
+
+
