@@ -1,5 +1,5 @@
   // Only run speech-to-text on service.html
-      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      const currentPage = window.location.pathname.split('/').pop() || 'service.html';
       
       if (currentPage === 'service.html') {
         // Speech-to-text functionality
