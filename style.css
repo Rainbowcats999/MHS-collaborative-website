@@ -56,9 +56,9 @@ body {
 
 .card {
     background: #6263ad;
-    height: 200px;
+    height: 400px;
     border-radius: 8px;
-    padding: 16px;
+    padding: 24px;
     transition: transform 220ms ease, box-shadow 220ms ease;
     will-change: transform, box-shadow;
     cursor: pointer;
