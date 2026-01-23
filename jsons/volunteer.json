@@ -9,6 +9,7 @@
         "blurb": "",
         "datePosted": ["", "", ""],
         "timeCommitment": ["", ""],
-        "eventDate": ["", "", ""]
+        "eventDate": ["", "", ""],
+        "contact": ["", ""]
     }
 ]
