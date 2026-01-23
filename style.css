@@ -33,17 +33,49 @@ body {
 /* SEARCH */
 .search-bar {
     display: flex;
-    gap: 10px;
-    padding: 20px;
+    gap: 12px;
+    padding: 24px 40px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .search-bar input {
     flex: 1;
-    padding: 10px;
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: #3b5f9e;
+    box-shadow: 0 0 0 3px rgba(59, 95, 158, 0.1);
+}
+
+.search-bar input::placeholder {
+    color: #999;
 }
 
 .search-bar select {
-    padding: 10px;
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    background: #ffffff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.search-bar select:hover {
+    border-color: #3b5f9e;
+}
+
+.search-bar select:focus {
+    outline: none;
+    border-color: #3b5f9e;
+    box-shadow: 0 0 0 3px rgba(59, 95, 158, 0.1);
 }
 
 /* CARD GRID */
@@ -160,6 +192,100 @@ body {
 
 .logo {
     margin-left: 40px;  /* adjusts distance from left edge */
+}
+
+/* FOOTER */
+.footer {
+    background: #3b5f9e;
+    color: #ffffff;
+    padding: 60px 40px 20px;
+    margin-top: 60px;
+    border-top: 4px solid #f0c933;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+}
+
+.footer-section {
+    animation: slideUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.footer-section:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.footer-section:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.footer-section:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.footer-section h3 {
+    color: #f0c933;
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+
+.footer-section p {
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 8px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 200ms ease;
+}
+
+.footer-section a:hover {
+    color: #f0c933;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #b0b0b0;
+    animation: fadeIn 1s ease-out 0.5s forwards;
+    opacity: 0;
+}
+
+/* Animation keyframes */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 
