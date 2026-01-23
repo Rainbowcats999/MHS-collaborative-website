@@ -22,7 +22,6 @@ body {
 
 .nav-links a {
     color: yellow;
-    margin: 0 15px;
     text-decoration: none;
 }
 
@@ -77,8 +76,10 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 350px;
-    margin: 0 auto;     
+    align-items: center;
+    justify-content: space-between; /* spread links evenly */
+    width: 48%; /* controls how much horizontal space the links take */
+    margin: 0 auto;
 }
 
 /* NAVBAR */
@@ -106,14 +107,16 @@ body {
 /* NAV LINKS — WIREFRAME SPACING */
 .nav-links {
     display: flex;
+    align-items: center;
+    justify-content: space-between; /* spread links evenly */
+    width: 48%; /* controls how much horizontal space the links take */
     margin: 0 auto;
-    gap: clamp(40px, 8vw, 240px);   /* 👈 BIG spacing */
 }
 
 .nav-links a {
     color: yellow;
     text-decoration: none;
-    font-size: clamp(15px, 1.8vw, 18px);
+    font-size: clamp(15px, 1.6vw, 18px);
     white-space: nowrap;
 }
 
