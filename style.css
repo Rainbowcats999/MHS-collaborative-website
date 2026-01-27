@@ -194,7 +194,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between; /* spread links evenly */
-    width: 48%; /* controls how much horizontal space the links take */
+    width: 65%; /* controls how much horizontal space the links take */
     margin: 0 auto;
 }
 
