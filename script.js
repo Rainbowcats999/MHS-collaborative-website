@@ -15,9 +15,6 @@ const vueApp = Vue.createApp({
         helpers: []
       }
   },
-  data() {
-    
-  },
   computed: {
    
   },
