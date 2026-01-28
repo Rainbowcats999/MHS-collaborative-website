@@ -77,6 +77,10 @@
                 <h3>{{ service.title }}</h3>
               <h4>on {{ service.eventDate }} at {{ service.timeCommitment[0] }} - {{ service.timeCommitment[1] }}</h4>
               <h5>Hosted by {{ service.staff }}</h5>
+              <p>{{ service.blurb }}</p>
+              
+              <button type="button" class="btn" id="modalbtn" data-bs-toggle="modal" data-bs-target="modal[index]">More Information</button>
+
             </div>
           </div>
         </div>
