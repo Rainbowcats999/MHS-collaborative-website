@@ -1,0 +1,15 @@
+[
+    {
+        "title": "",
+        "staff": ["", ""],
+        "location": "",
+        "requirements": ["", ""],
+        "exp": ["", ""],
+        "description": "",
+        "blurb": "",
+        "datePosted": ["", "", ""],
+        "timeCommitment": ["", ""],
+        "eventDate": ["", "", ""],
+        "contact": ["", ""]
+    }
+]
