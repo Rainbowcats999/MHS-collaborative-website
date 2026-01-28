@@ -19,11 +19,11 @@
     />
 
     <!-- CSS -->
-     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
 
     <!-- Vue Connect -->
     <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
-    <link rel="stylesheet" href="https://use.typekit.net/zhg3ryu.css">
+    <link rel="stylesheet" href="https://use.typekit.net/zhg3ryu.css" />
   </head>
 
   <body>
@@ -31,9 +31,22 @@
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img src="imgs/Document.png" alt="Logo" width="100" class="d-inline-block align-text-top">
+            <img
+              src="imgs/Document.png"
+              alt="Logo"
+              width="100"
+              class="d-inline-block align-text-top"
+            />
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -54,12 +67,29 @@
           </div>
         </div>
       </nav>
+
+      <section class="my-2 mx-0">
+        <div class="carousel">
+          <button class="carousel-arrow carousel-prev" id="prevBtn">❮</button>
+          <div class="carousel-inner" id="carouselInner">
+            <img src="imgs/hero-img.jpg" alt="Image 1" />
+            <img src="imgs/MLK.jpg" alt="Image 2" />
+            <img src="imgs/Mortgage.jpg" alt="Image 3" />
+          </div>
+          <button class="carousel-arrow carousel-next" id="nextBtn">❯</button>
+          <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+      </section>
     </header>
     <main>
-      <div class="w-100" alt="hero image" style="background: url(imgs/hero-img.jpg); height: 300px; background-position: center; background-repeat: no-repeat; background-size: cover;"></div>
+      <!--<div class="w-100" alt="hero image" style="background: url(imgs/hero-img.jpg); height: 300px; background-position: center; background-repeat: no-repeat; background-size: cover;"></div>-->
 
       <section class="my-2 mx-3">
-        Write info here
+        <h2>Community Service Options</h2>
+        <p>
+          Learn about various community service opportunities available in our
+          area.
+        </p>
       </section>
     </main>
     <footer>
@@ -78,5 +108,55 @@
       crossorigin="anonymous"
     ></script>
     <script src="script.js"></script>
+    
+    <script>
+      // Carousel functionality
+      const carouselInner = document.getElementById('carouselInner');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const carouselDots = document.getElementById('carouselDots');
+      const images = carouselInner.querySelectorAll('img');
+      
+      let currentIndex = 0;
+      const totalImages = images.length;
+      
+      // Create dots
+      for (let i = 0; i < totalImages; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        dot.addEventListener('click', () => goToSlide(i));
+        carouselDots.appendChild(dot);
+      }
+      
+      const dots = carouselDots.querySelectorAll('.carousel-dot');
+      
+      function updateCarousel() {
+        const offset = -currentIndex * 100;
+        carouselInner.style.transform = `translateX(${offset}%)`;
+        
+        // Update dots
+        dots.forEach((dot, index) => {
+          dot.classList.toggle('active', index === currentIndex);
+        });
+      }
+      
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalImages;
+        updateCarousel();
+      }
+      
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+        updateCarousel();
+      }
+      
+      function goToSlide(index) {
+        currentIndex = index;
+        updateCarousel();
+      }
+      
+      prevBtn.addEventListener('click', prevSlide);
+      nextBtn.addEventListener('click', nextSlide);
+    </script>
   </body>
 </html>
