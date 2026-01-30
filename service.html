@@ -56,8 +56,7 @@
       </nav>
     </header>
     <main>
-      <div id="app" class="container">
-        <!-- SEARCH BAR -->
+      <!-- SEARCH BAR -->
         <section class="search-bar">
           <input type="text" id="searchInput" placeholder="Search..." />
           <button id="micButton" class="mic-button" title="Click to speak">
@@ -71,25 +70,36 @@
           </select>
         </section>
 
+      <div id="app" class="container">
+
         <div class="row">
-          <div class="p-2 col-md-6" v-for="(service, index) in services">
+          <div class="p-2 col-md-6" v-for="(service, index) in services" :key="index">
             <div class="infocard">
                 <h3>{{ service.title }}</h3>
-              <h4>on {{ service.eventDate }} at {{ service.timeCommitment[0] }} - {{ service.timeCommitment[1] }}</h4>
-              <h5>Hosted by {{ service.staff }}</h5>
+              <h4>on {{ makeTextDate(service.eventDate) }} at {{ service.timeCommitment[0] }} - {{ service.timeCommitment[1] }}</h4>
+              <h5>Hosted by {{ renderHosts(service.staff) }}</h5>
               <p>{{ service.blurb }}</p>
               
-              <button type="button" class="btn" id="modalbtn" data-bs-toggle="modal" data-bs-target="modal[index]">More Information</button>
+              <button type="button" class="btn" id="modalbtn" data-bs-toggle="modal" :data-bs-target="'#modal-' + index">More Information</button>
 
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" :id="'modal-' + index" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content card p-2 rounded-0">
+                  
+                  <!-- Closing Modal -->
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Modal -->
-        <div class="modal fade text-center" id="modal[index]" tabindex="-1" aria-hidden="true">
-
-        </div>
       </div>
+
     </main>
     <footer>
       <!-- place footer here -->

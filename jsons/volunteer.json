@@ -1,15 +1,16 @@
 [
     {
-        "title": "",
-        "staff": ["", ""],
+        "title": "title",
+        "titleShort": "modala",
+        "staff": ["Mr. 1", "Ms. 2"],
         "location": "",
         "requirements": ["", ""],
         "exp": ["", ""],
         "description": "",
         "blurb": "",
         "datePosted": ["", "", ""],
-        "timeCommitment": ["", ""],
-        "eventDate": ["", "", ""],
+        "timeCommitment": ["6:00PM", "7:00PM"],
+        "eventDate": [2026, 1, 30],
         "contact": ["", ""]
     }
 ]
