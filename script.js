@@ -24,29 +24,29 @@ const vueApp = Vue.createApp({
       let month = ""
       let theDate = ""
       if(dateArray[1] === 1){
-        month = "January"
+        month = "Jan."
       } else if (dateArray[1] === 2){
-        month = "February"
+        month = "Feb."
       } else if (dateArray[1] === 3){
-        month = "March"
+        month = "Mar."
       } else if (dateArray[1] === 4){
-        month = "April"
+        month = "Apr."
       } else if (dateArray[1] === 5){
         month = "May"
       } else if (dateArray[1] === 6){
-        month = "June"
+        month = "Jun."
       } else if (dateArray[1] === 7){
-        month = "July"
+        month = "Jul."
       } else if (dateArray[1] === 8){
-        month = "August"
+        month = "Aug."
       } else if (dateArray[1] === 9){
-        month = "September"
+        month = "Sep."
       } else if (dateArray[1] === 10){
-        month = "October"
+        month = "Oct."
       } else if (dateArray[1] === 11){
-        month = "November"
+        month = "Nov."
       } else {
-        month = "December"
+        month = "Dec."
       }
 
       theDate = month + " " + dateArray[2] + ", " + dateArray[0]
