@@ -284,6 +284,19 @@ body {
         flex-direction: column !important;
         gap: 10px;
     }
+
+    /* Show navbar links when collapse is expanded on mobile */
+    .navbar-collapse.show {
+        display: flex !important;
+    }
+
+    .collapse.navbar-collapse {
+        display: none;
+    }
+
+    .collapse.navbar-collapse.show {
+        display: flex !important;
+    }
 }
 
 .footer-section {

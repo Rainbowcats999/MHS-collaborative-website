@@ -1,3 +1,21 @@
+// Mobile navbar toggle fix
+document.addEventListener('DOMContentLoaded', () => {
+	const navbarToggler = document.querySelector('.navbar-toggler');
+	const navbarCollapse = document.getElementById('navbarNav');
+	
+	if (navbarToggler && navbarCollapse) {
+		navbarToggler.addEventListener('click', () => {
+			navbarCollapse.classList.toggle('show');
+			// Force display flex when showing
+			if (navbarCollapse.classList.contains('show')) {
+				navbarCollapse.style.display = 'flex';
+			} else {
+				navbarCollapse.style.display = 'none';
+			}
+		});
+	}
+});
+
 // Carousel functionality (moved from inline script in index.html)
 document.addEventListener('DOMContentLoaded', () => {
 	const carouselInner = document.getElementById('carouselInner');
