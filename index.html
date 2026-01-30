@@ -109,54 +109,6 @@
     ></script>
     <script src="script.js"></script>
     
-    <script>
-      // Carousel functionality
-      const carouselInner = document.getElementById('carouselInner');
-      const prevBtn = document.getElementById('prevBtn');
-      const nextBtn = document.getElementById('nextBtn');
-      const carouselDots = document.getElementById('carouselDots');
-      const images = carouselInner.querySelectorAll('img');
-      
-      let currentIndex = 0;
-      const totalImages = images.length;
-      
-      // Create dots
-      for (let i = 0; i < totalImages; i++) {
-        const dot = document.createElement('div');
-        dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-        dot.addEventListener('click', () => goToSlide(i));
-        carouselDots.appendChild(dot);
-      }
-      
-      const dots = carouselDots.querySelectorAll('.carousel-dot');
-      
-      function updateCarousel() {
-        const offset = -currentIndex * 100;
-        carouselInner.style.transform = `translateX(${offset}%)`;
-        
-        // Update dots
-        dots.forEach((dot, index) => {
-          dot.classList.toggle('active', index === currentIndex);
-        });
-      }
-      
-      function nextSlide() {
-        currentIndex = (currentIndex + 1) % totalImages;
-        updateCarousel();
-      }
-      
-      function prevSlide() {
-        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-        updateCarousel();
-      }
-      
-      function goToSlide(index) {
-        currentIndex = index;
-        updateCarousel();
-      }
-      
-      prevBtn.addEventListener('click', prevSlide);
-      nextBtn.addEventListener('click', nextSlide);
-    </script>
+    <!-- Carousel script moved to `script.js` -->
   </body>
 </html>

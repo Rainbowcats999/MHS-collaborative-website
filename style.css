@@ -258,6 +258,34 @@ body {
     margin: 0 auto 40px;
 }
 
+/* Navbar spacing overrides (Bootstrap uses .navbar-nav/.nav-link) */
+.navbar-nav {
+    display: flex !important;
+    gap: 400px; /* increase this to space links more */
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-nav .nav-link {
+    color: yellow !important;
+    padding: 8px 6px;
+    position: relative;
+    border-bottom: 2px solid transparent;
+    transition: color 180ms ease, border-color 180ms ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+    border-bottom-color: #f0c933;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column !important;
+        gap: 10px;
+    }
+}
+
 .footer-section {
     animation: slideUp 0.8s ease-out forwards;
     opacity: 0;
@@ -439,8 +467,11 @@ body {
 .carousel-dot.active {
   background: rgba(255, 255, 255, 0.95);
 }
-  66% { transform: translateX(-200%); }
-  100% { transform: translateX(0); }
-}
 
+/* Fallback styling for broken images */
+.img-fallback {
+    object-fit: contain !important;
+    background: linear-gradient(180deg, #ddd 0%, #bbb 100%);
+    filter: grayscale(20%);
+}
 
