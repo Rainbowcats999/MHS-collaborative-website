@@ -96,20 +96,33 @@
 
                   <!-- Info -->
                   <div class="modal-body">
-                    <h4>Hosted by {{ renderHosts(service.staff) }}</h4>
-                    <h5>Location: {{ service.location }}</h5>
-                    <h5>Date Posted: {{ makeTextDate(service.datePosted) }}</h5>
-                    <h5>Event Date: {{ makeTextDate(service.eventDate) }}</h5>
-                    <h5>Time Commitment: {{ service.timeCommitment[0] }} - {{ service.timeCommitment[1] }}</h5>
-                    <h5>Requirements:</h5>
-                    <ul>
-                      <li v-for="(req, reqIndex) in service.requirements" :key="reqIndex">{{ req }}</li>
-                    </ul>
-                    <p>{{ service.description }}</p>
-                    <h5>Contact Information:</h5>
-                    <ul>
-                      <li v-for="(contactInfo, contactIndex) in service.contact" :key="contactIndex">{{ contactInfo }}</li>
-                    </ul>
+                    <div class="row">
+                      <div class="col-md-8">
+                        <h4>Hosted by {{ renderHosts(service.staff) }}</h4>
+                        <h5>Location: {{ service.location }}</h5>
+                        <h5>Date Posted: {{ makeTextDate(service.datePosted) }}</h5>
+                        <h5>Event Date: {{ makeTextDate(service.eventDate) }}</h5>
+                        <h5>Time Commitment: {{ service.timeCommitment[0] }} - {{ service.timeCommitment[1] }}</h5>
+
+                        <p>{{ service.description }}</p>
+                      </div>
+
+                      <div class="col-md-4">
+                          <h5>Requirements:</h5>
+                          <ul>
+                            <li v-for="(req, reqIndex) in service.requirements" :key="reqIndex">{{ req }}</li>
+                          </ul>
+                          <h5>Given Experience:</h5>
+                          <ul>
+                            <li v-for="(req, reqIndex) in service.requirements" :key="reqIndex">{{ exp }}</li>
+                          </ul>
+                          <h5>Contact Information:</h5>
+                          <ul>
+                            <li v-for="(contactInfo, contactIndex) in service.contact" :key="contactIndex">{{ contactInfo }}</li>
+                          </ul>
+                      </div>
+                    </div>
+                    
                   </div>
                   
                 </div>
