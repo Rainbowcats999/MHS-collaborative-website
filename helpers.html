@@ -105,15 +105,15 @@
                       <div class="col-md-4">
                           <h5>Looking For:</h5>
                           <ul>
-                            <li v-for="(lookingFor, lookIndex) in helpers.lookingFor" :key="lookIndex">{{ lookingFor }}</li>
+                            <li v-for="(look, lookIndex) in helper.lookingFor" :key="lookIndex">{{ look }}</li>
                           </ul>
-                          <h5>Experience:</h5>
+                          <h5>Given Experience:</h5>
                           <ul>
-                            <li v-for="(req, reqIndex) in helpers.requirements" :key="reqIndex">{{ exp }}</li>
+                            <li v-for="(exp, expIndex) in helper.exp" :key="expIndex">{{ exp }}</li>
                           </ul>
                           <h5>Contact Information:</h5>
                           <ul>
-                            <li v-for="(contactInfo, contactIndex) in helpers.contact" :key="contactIndex">{{ contactInfo }}</li>
+                            <li v-for="(contactInfo, contactIndex) in helper.contact" :key="contactIndex">{{ contactInfo }}</li>
                           </ul>
                       </div>
                     </div>
