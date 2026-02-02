@@ -118,6 +118,21 @@ body {
 /* CARD GRID */
 .infocard {
     background: #6263ad;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.infocard:hover {
+    transform: scale(1.02);
+}
+
+.infocard button {
+    background: #f0c933;
+    transition: .5s;
+}
+
+.infocard button:hover {
+    background: #fff;
 }
 
 /* MOBILE */
