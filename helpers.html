@@ -74,7 +74,7 @@
           <div class="p-2 col-md-6" v-for="(helper, index) in helpers" :key="index">
             <div class="infocard p-3">
                 <h3>{{ helper.name.first }} {{ helper.name.last }}</h3>
-              <h4>a {{ helper.grade }} grader located in {{ helper.location }}</h4>
+              <h5>a {{ helper.grade }} grader located in {{ helper.location }}</h5>
               <p>{{ helper.blurb }}</p>
               
               <button type="button" class="btn" id="modalbtn" data-bs-toggle="modal" :data-bs-target="'#modal-' + index">More Information</button>
@@ -87,7 +87,7 @@
                 <div class="modal-content card p-2 rounded-0">
                   
                   <div class="modal-header">
-                    <h1 class="modal-title fs-5 prodRev" id="exampleModalLabel">{{ helper.title }}</h1>
+                    <h1 class="modal-title" id="exampleModalLabel">{{ helper.name.first }} {{ helper.name.last }}</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
 

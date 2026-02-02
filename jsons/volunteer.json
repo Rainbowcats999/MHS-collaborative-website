@@ -1,16 +1,17 @@
 [
     {
-        "title": "title",
-        "titleShort": "modala",
-        "staff": ["Mr. 1", "Ms. 2"],
-        "location": "",
-        "requirements": ["1", "2"],
+        "title": "Coffee for a Cause",
+        "titleShort": "cfac",
+        "staff": ["Tastefully Done Events"],
+        "location": "Creative Cup Coffee, Spring Lake, NJ",
+        "requirements": ["In-person attendance"],
         "exp": ["3", "4"],
         "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         "blurb": "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
         "datePosted": [2025, 11, 20],
         "timeCommitment": ["6:00PM", "7:00PM"],
         "eventDate": [2026, 1, 30],
-        "contact": ["phone", "email"]
+        "contact": ["Tickets", "Email"],
+        "link": ["https://www.eventbrite.com/e/coffee-for-a-cause-tickets-1980813812435", "https://www.eventbrite.com/o/3097584364?contact_organizer=true"]
     }
 ]
