@@ -71,7 +71,7 @@ const vueApp = Vue.createApp({
 
       return hostsText
     }
-  }
+}
 });
 
 vueApp.mount("#app");
