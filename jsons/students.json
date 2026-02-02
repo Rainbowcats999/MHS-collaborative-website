@@ -8,6 +8,9 @@
         "grade": "",
         "blurb": "",
         "datePosted": ["", "", ""],
-        "timeCommitment": ["", ""]
+        "timeCommitment": ["", ""],
+        "lookingFor": ["", ""],
+        "exp": ["", ""],
+        "contact": ["", ""]
     }
 ]
