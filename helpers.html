@@ -96,6 +96,17 @@
 
             </div>
 
+            <div class="row">
+          <div class="p-2 col-md-6" v-for="(helper, index) in helpers" :key="index">
+            <div class="infocard p-3">
+                <h3>{{ helper.name.first }} {{ helper.name.last }}</h3>
+              <h5>a {{ helper.grade }} grader located in {{ helper.location }}</h5>
+              <p>{{ helper.blurb }}</p>
+              
+              <button type="button" class="btn" id="modalbtn" data-bs-toggle="modal" :data-bs-target="'#modal-' + index">More Information</button>
+
+            </div>
+
             <!-- Modal -->
             <div class="modal fade" :id="'modal-' + index" tabindex="-1" aria-hidden="true">
               <div class="modal-dialog modal-fullscreen">
