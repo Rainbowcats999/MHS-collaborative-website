@@ -486,6 +486,49 @@ body {
     filter: grayscale(20%);
 }
 
+/* Mixed Card Grid Layout */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Small cards - top row (1x2 layout - each takes full width) */
+.card-small {
+    background: #6263ad;
+    height: 200px;
+    border-radius: 8px;
+    padding: 24px;
+    transition: transform 220ms ease, box-shadow 220ms ease;
+    will-change: transform, box-shadow;
+    cursor: pointer;
+    grid-column: span 1;
+}
+
+/* Large cards - bottom row (2x1 layout - wider, same height as small) */
+.card-large {
+    background: #6263ad;
+    height: 200px;
+    border-radius: 8px;
+    padding: 24px;
+    transition: transform 220ms ease, box-shadow 220ms ease;
+    will-change: transform, box-shadow;
+    cursor: pointer;
+    grid-column: span 1;
+}
+
+/* Hover effects for cards */
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+}
+
+.card:active {
+    transform: translateY(-2px) scale(0.995);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.14);
+}
+
 
 
 
