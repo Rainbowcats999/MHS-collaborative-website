@@ -73,25 +73,80 @@
     </header>
     <main>
       <!-- SEARCH BAR -->
-      <section class="search-bar">
-        <input type="text" id="searchInput" placeholder="Search..." />
-        <button id="micButton" class="mic-button" title="Click to speak">
-          🎤
-        </button>
-        <select>
-          <option>This</option>
-          <option>That</option>
-          <option>Other</option>
-          <option>More</option>
-        </select>
-      </section>
+        <section class="search-bar">
+          <input type="text" id="searchInput" placeholder="Search..." />
+          <button id="micButton" class="mic-button" title="Click to speak">
+            🎤
+          </button>
+          <select>
+            <option>This</option>
+            <option>That</option>
+            <option>Other</option>
+            <option>More</option>
+          </select>
+        </section>
 
-      <!-- CARD GRID -->
-      <div class="card-grid">
-        <div class="card">Card 1</div>
-        <div class="card">Card 2</div>
-        <div class="card">Card 3</div>
-        <div class="card">Card 4</div>
+      <div id="app" class="mx-4">
+
+        <div class="row">
+          <div class="p-2 col-md-6" v-for="(service, index) in services" :key="index">
+            <div class="infocard p-3">
+                <h3>{{ service.title }}</h3>
+              <h5>on {{ makeTextDate(service.eventDate) }} at {{ service.timeCommitment[0] }} - {{ service.timeCommitment[1] }}</h5>
+              <h6>Hosted by {{ renderHosts(service.staff) }}</h6>
+              <p>{{ service.blurb }}</p>
+              
+              <button type="button" class="btn" id="modalbtn" data-bs-toggle="modal" :data-bs-target="'#modal-' + index">More Information</button>
+
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" :id="'modal-' + index" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content card p-2 rounded-0">
+                  
+                  <div class="modal-header">
+                    <h1 class="modal-title" id="exampleModalLabel">{{ service.title }}</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+                  <!-- Info -->
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-8">
+                        <h4>Hosted by {{ renderHosts(service.staff) }}</h4>
+                        <h5>Location: {{ service.location }}</h5>
+                        <h5>Date Posted: {{ makeTextDate(service.datePosted) }}</h5>
+                        <h5>Event Date: {{ makeTextDate(service.eventDate) }}</h5>
+                        <h5>Time Commitment: {{ service.timeCommitment[0] }} - {{ service.timeCommitment[1] }}</h5>
+
+                        <p id="eventDesc">{{ service.description }}</p>
+                      </div>
+
+                      <div class="col-md-4">
+                          <h5>Requirements:</h5>
+                          <ul>
+                            <li v-for="(req, reqIndex) in service.requirements" :key="reqIndex">{{ req }}</li>
+                          </ul>
+                          <h5>Given Experience:</h5>
+                          <ul>
+                            <li v-for="(exp, expIndex) in service.exp" :key="expIndex">{{ exp }}</li>
+                          </ul>
+                          <h5>Contact Information:</h5>
+                          <ul>
+                            <li v-for="(contactInfo, contactIndex) in service.contact" :key="contactIndex"><a :href="service.link[contactIndex]">{{ contactInfo }}</a></li>
+                          </ul>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </main>
     <footer>

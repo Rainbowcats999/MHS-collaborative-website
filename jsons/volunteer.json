@@ -1,15 +1,17 @@
 [
     {
-        "title": "",
-        "staff": ["", ""],
-        "location": "",
-        "requirements": ["", ""],
-        "exp": ["", ""],
-        "description": "",
-        "blurb": "",
-        "datePosted": ["", "", ""],
-        "timeCommitment": ["", ""],
-        "eventDate": ["", "", ""],
-        "contact": ["", ""]
+        "title": "Coffee for a Cause",
+        "titleShort": "cfac",
+        "staff": ["Tastefully Done Events"],
+        "location": "Creative Cup Coffee, Spring Lake, NJ",
+        "requirements": ["In-person attendance"],
+        "exp": ["N/A"],
+        "description": "Sip great coffee and support a cause that matters—come hang out and make a difference with us! Join us in person for Coffee for a Cause –20% of Creative Cup sales benefit the Rae of Light Foundation. Shop our vendors to give back more!",
+        "blurb": "Sip great coffee and support a cause that matters—come hang out and make a difference with us!",
+        "datePosted": [2025, 11, 20],
+        "timeCommitment": ["6:00PM", "7:00PM"],
+        "eventDate": [2026, 1, 30],
+        "contact": ["Tickets", "Email"],
+        "link": ["https://www.eventbrite.com/e/coffee-for-a-cause-tickets-1980813812435", "https://www.eventbrite.com/o/3097584364?contact_organizer=true"]
     }
 ]
