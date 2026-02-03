@@ -11,7 +11,56 @@
         "timeCommitment": ["4pm", "5:30pm"],
         "lookingFor": ["job", ""],
         "exp": ["", ""],
-        "contact": ["", ""]
+        "contact": ["", ""],
+        "description": "Looking for volunteer opportunities in my community."
+    },
+
+    {
+        "name": {
+            "first": "Jacob",
+            "last": "Smith"
+        },
+        "location": "Edison, NJ, USA",
+        "grade": "11th",
+        "blurb": "Passionate about community service",
+        "datePosted": [2026, 2, 1],
+        "timeCommitment": ["3pm", "6pm"],
+        "lookingFor": ["mentorship", "hands-on experience"],
+        "exp": ["tutoring", "event planning"],
+        "contact": ["jacob.smith@email.com", "555-0101"],
+        "description": "Experienced in community outreach and looking to expand my skills."
+    },
+
+    {
+        "name": {
+            "first": "Maria",
+            "last": "Garcia"
+        },
+        "location": "Rahway, NJ, USA",
+        "grade": "10th",
+        "blurb": "Environmental advocate seeking impact",
+        "datePosted": [2026, 1, 28],
+        "timeCommitment": ["2pm", "5pm"],
+        "lookingFor": ["environmental projects", "team collaboration"],
+        "exp": ["recycling initiatives", "park cleanup"],
+        "contact": ["maria.garcia@email.com", "555-0102"],
+        "description": "Dedicated to making our community more sustainable and green."
+    },
+
+    {
+        "name": {
+            "first": "David",
+            "last": "Chen"
+        },
+        "location": "Linden, NJ, USA",
+        "grade": "12th",
+        "blurb": "Tech-savvy volunteer ready to help",
+        "datePosted": [2026, 1, 25],
+        "timeCommitment": ["5pm", "7pm"],
+        "lookingFor": ["tech projects", "teaching opportunities"],
+        "exp": ["coding", "website design"],
+        "contact": ["david.chen@email.com", "555-0103"],
+        "description": "Skilled in technology and eager to share knowledge with others."
     }
 ]
 
