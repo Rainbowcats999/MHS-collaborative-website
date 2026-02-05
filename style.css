@@ -154,12 +154,20 @@ body {
 /* MODALS */
 .modal-content {
     background-color: #f0c933;
-    width: 50%;
     transition: 0s;
 }
 
-.modal-content:hover {
+.modal-dialog:hover {
     transform: scale(1);
+}
+
+.modal-dialog {
+    min-width: 80vw;
+    transition: 0s;
+}
+
+.modal-header {
+    border-bottom: 10px double #3b5f9e;
 }
 
 /* NAVBAR */
@@ -240,61 +248,6 @@ body {
     }
 }
 
-.footer-section {
-    animation: slideUp 0.8s ease-out forwards;
-    opacity: 0;
-}
-
-.footer-section:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.footer-section:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.footer-section:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.footer-section h3 {
-    color: #f0c933;
-    margin-bottom: 16px;
-    font-size: 18px;
-}
-
-.footer-section p {
-    line-height: 1.6;
-    color: #e0e0e0;
-    margin-bottom: 8px;
-}
-
-.footer-section ul {
-    list-style: none;
-}
-
-.footer-section ul li {
-    margin-bottom: 10px;
-}
-
-.footer-section a {
-    color: #e0e0e0;
-    text-decoration: none;
-    transition: color 200ms ease;
-}
-
-.footer-section a:hover {
-    color: #f0c933;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: #b0b0b0;
-    animation: fadeIn 1s ease-out 0.5s forwards;
-    opacity: 0;
-}
 
 /* Animation keyframes */
 @keyframes slideUp {
@@ -428,51 +381,3 @@ body {
     background: linear-gradient(180deg, #ddd 0%, #bbb 100%);
     filter: grayscale(20%);
 }
-
-/* Mixed Card Grid Layout */
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 20px;
-}
-
-/* Small cards - top row (1x2 layout - each takes full width) */
-.card-small {
-    background: #6263ad;
-    height: 200px;
-    border-radius: 8px;
-    padding: 24px;
-    transition: transform 220ms ease, box-shadow 220ms ease;
-    will-change: transform, box-shadow;
-    cursor: pointer;
-    grid-column: span 1;
-}
-
-/* Large cards - bottom row (2x1 layout - wider, same height as small) */
-.card-large {
-    background: #6263ad;
-    height: 200px;
-    border-radius: 8px;
-    padding: 24px;
-    transition: transform 220ms ease, box-shadow 220ms ease;
-    will-change: transform, box-shadow;
-    cursor: pointer;
-    grid-column: span 1;
-}
-
-/* Hover effects for cards */
-.card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.18);
-}
-
-.card:active {
-    transform: translateY(-2px) scale(0.995);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.14);
-}
-
-
-
-
-
