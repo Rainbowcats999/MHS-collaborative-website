@@ -374,28 +374,6 @@ body {
     }
 }
 
-/* .carousel {
-  width: 100%;
-  max-width: 600px; /* optional, limits carousel size */
-  /* height: 300px;
-  overflow: hidden;
-  margin: 20px auto;
-  border-radius: 10px;
-  border: 2px solid #ccc;
-}
-
-.carousel-inner {
-  display: flex;
-  width: 1800px; /* number of images × 600px */
-  /* animation: slide 9s infinite;
-}
-
-.carousel-inner img {
-  width: 600px; /* same as max-width of carousel */
-  /* height: 300px;
-  object-fit: cover;
-}  */ 
-
 /* Smooth sliding */
 @keyframes slide {
   0% { transform: translateX(0); }
