@@ -155,6 +155,19 @@ body {
 .modal-content {
     background-color: #f0c933;
     transition: 0s;
+    color: #09093f!important;
+}
+
+.modal-content a {
+    color: #6d6dff!important;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.modal-content a:hover {
+    color: #09093f!important;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .modal-dialog:hover {
