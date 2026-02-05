@@ -464,6 +464,47 @@ body {
     filter: grayscale(20%);
 }
 
+/* Contact page styles */
+.contact-wrapper {
+    padding: 30px 20px;
+}
+
+.contact-info h2 {
+    color: #153b7c;
+    margin-bottom: 12px;
+}
+
+.contact-info p {
+    color: #1a1a1a;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.contact-form .iframe-wrap {
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.contact-form iframe {
+    width: 100%;
+    height: 680px;
+    border: none;
+    border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        padding: 12px 14px;
+        text-align: left;
+    }
+
+    .contact-form iframe {
+        height: 600px;
+    }
+}
+
 /* Mixed Card Grid Layout */
 .card-grid {
     display: grid;
