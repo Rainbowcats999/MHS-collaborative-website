@@ -13,8 +13,6 @@ body {
     font-style: normal;
 }
 
-
-
 /* NAVBAR */
 .navbar {
     display: flex;
@@ -559,6 +557,99 @@ body {
 }
 
 /* Mixed Card Grid Layout */
+/* Modal styling */
+.modal-backdrop.show {
+    background-color: rgba(21, 59, 124, 0.65); /* navy-tinted overlay */
+}
+
+.modal .modal-content.card {
+    background: linear-gradient(180deg, #ffffff 0%, #f7f9ff 100%);
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    overflow: hidden;
+    max-width: 980px;
+    margin: 24px auto;
+}
+
+/* subtle open/close animation for modal content */
+.modal .modal-content.card {
+    transform: translateY(10px) scale(0.995);
+    opacity: 0;
+    transition: transform 260ms cubic-bezier(.2,.9,.2,1), opacity 260ms ease;
+}
+
+.modal.show .modal-content.card {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+.modal-fullscreen .modal-content.card {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    background: #153b7c;
+    color: #ffffff;
+    border-bottom: none;
+    padding: 18px 24px;
+    align-items: center;
+}
+
+.modal-title {
+    font-size: clamp(18px, 2.2vw, 28px);
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.modal-header .btn-close {
+    filter: invert(1) brightness(1.1);
+    opacity: 0.95;
+}
+
+.modal-body {
+    padding: 24px;
+    color: #1a1a1a;
+    line-height: 1.6;
+    overflow: auto;
+    flex: 1 1 auto;
+}
+
+.modal-footer {
+    padding: 16px 24px;
+    border-top: none;
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    background: transparent;
+}
+
+.modal .btn {
+    background: #3b5f9e;
+    color: #fff;
+    border-radius: 6px;
+    padding: 8px 14px;
+    border: none;
+}
+
+.modal .btn.btn-secondary {
+    background: #f0c933;
+    color: #153b7c;
+}
+
+@media (max-width: 768px) {
+    .modal .modal-content.card {
+        margin: 0;
+        border-radius: 0;
+        max-width: 100%;
+    }
+
+    .modal-body {
+        padding: 16px;
+    }
+}
+
 .card-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -569,9 +660,9 @@ body {
 /* Small cards - top row (1x2 layout - each takes full width) */
 .card-small {
     background: #6263ad;
-    height: 200px;
+    height: 320px; /* increased height for taller cards on homepage */
     border-radius: 8px;
-    padding: 24px;
+    padding: 32px;
     transition: transform 220ms ease, box-shadow 220ms ease;
     will-change: transform, box-shadow;
     cursor: pointer;
@@ -581,9 +672,9 @@ body {
 /* Large cards - bottom row (2x1 layout - wider, same height as small) */
 .card-large {
     background: #6263ad;
-    height: 200px;
+    height: 320px; /* increased height for taller cards on homepage */
     border-radius: 8px;
-    padding: 24px;
+    padding: 32px;
     transition: transform 220ms ease, box-shadow 220ms ease;
     will-change: transform, box-shadow;
     cursor: pointer;
@@ -600,3 +691,9 @@ body {
     transform: translateY(-2px) scale(0.995);
     box-shadow: 0 6px 12px rgba(0,0,0,0.14);
 }
+
+
+
+
+
+
