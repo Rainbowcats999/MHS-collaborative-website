@@ -12,11 +12,27 @@ const vueApp = Vue.createApp({
   data() {
     return {
         services: [],
-        helpers: []
+        helpers: [],
+        searchQuery: ''  // Add this
       }
   },
   computed: {
-   
+   // Filter services based on search query
+    filteredServices() {
+      return this.services.filter(service => 
+        service.title.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+        service.blurb.toLowerCase().includes(this.searchQuery.toLowerCase())
+      )
+    },
+
+	// Filter helpers based on search query
+    filteredHelpers() {
+      return this.helpers.filter(helper => 
+        (helper.name.first + ' ' + helper.name.last).toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+        helper.blurb.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+        helper.location.toLowerCase().includes(this.searchQuery.toLowerCase())
+      )
+    }
   },
   methods: {
     /* Format dates */
@@ -75,3 +91,4 @@ const vueApp = Vue.createApp({
 });
 
 vueApp.mount("#app");
+

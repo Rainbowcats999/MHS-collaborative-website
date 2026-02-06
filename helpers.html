@@ -72,20 +72,20 @@
       </nav>
     </header>
     <main>
-      <!-- SEARCH BAR -->
-      <section class="search-bar">
-        <input type="text" placeholder="Search..." />
-        <select>
-          <option>9th grade</option>
-          <option>10th grade</option>
-          <option>11th grade</option>
-          <option>12th grade</option>
-        </select>
-      </section>
+      <div id="app">
+        <!-- SEARCH BAR -->
+        <section class="search-bar">
+          <input type="text" placeholder="Search..." v-model="searchQuery" />
+          <select>
+            <option>9th grade</option>
+            <option>10th grade</option>
+            <option>11th grade</option>
+            <option>12th grade</option>
+          </select>
+        </section>
 
-      <div id="app" class="mx-4">
-        <div class="row">
-          <div class="col-md-6 p-3" v-for="(helper, index) in helpers" :key="index">
+        <div class="row mx-4">
+          <div class="col-md-6 p-3" v-for="(helper, index) in filteredHelpers" :key="index">
             <div class="infocard p-3">
               <h3>
                 {{ helper.name.first }} {{ helper.name.last }}
