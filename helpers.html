@@ -85,50 +85,30 @@
 
       <div id="app" class="mx-4">
         <div class="row">
-          <div
-            class="col-md-6 p-3"
-            v-for="(helper, index) in helpers"
-            :key="index"
-          >
+          <div class="col-md-6 p-3" v-for="(helper, index) in helpers" :key="index">
             <div class="infocard p-3">
-              <h3 style="color: aliceblue">
+              <h3>
                 {{ helper.name.first }} {{ helper.name.last }}
               </h3>
-              <h5 style="color: aliceblue">
+              <h5>
                 a {{ helper.grade }} grader located in {{ helper.location }}
               </h5>
-              <p style="color: aliceblue">{{ helper.blurb }}</p>
+              <p>{{ helper.blurb }}</p>
 
-              <button
-                type="button"
-                class="btn"
-                id="modalbtn"
-                data-bs-toggle="modal"
-                :data-bs-target="'#modal-' + index"
-              >
+              <button type="button" class="btn" id="modalbtn" data-bs-toggle="modal" :data-bs-target="'#modal-' + index">
                 More Information
               </button>
             </div>
 
             <!-- Modal -->
-            <div
-              class="modal fade"
-              :id="'modal-' + index"
-              tabindex="-1"
-              aria-hidden="true"
-            >
+            <div class="modal fade" :id="'modal-' + index" tabindex="-1" aria-hidden="true">
               <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content card p-2 rounded-0">
                   <div class="modal-header">
                     <h1 class="modal-title" id="exampleModalLabel">
                       {{ helper.name.first }} {{ helper.name.last }}
                     </h1>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
 
                   <!-- Info -->
@@ -140,8 +120,7 @@
                           Date Posted: {{ makeTextDate(helper.datePosted) }}
                         </h5>
                         <h5>
-                          Time Commitment: {{ helper.timeCommitment[0] }} - {{
-                          helper.timeCommitment[1] }}
+                          Time Commitment: {{ helper.timeCommitment[0] }} - {{ helper.timeCommitment[1] }}
                         </h5>
 
                         <p>{{ helper.description }}</p>
@@ -150,28 +129,19 @@
                       <div class="col-md-4">
                         <h5>Looking For:</h5>
                         <ul>
-                          <li
-                            v-for="(look, lookIndex) in helper.lookingFor"
-                            :key="lookIndex"
-                          >
+                          <li v-for="(look, lookIndex) in helper.lookingFor" :key="lookIndex">
                             {{ look }}
                           </li>
                         </ul>
                         <h5>Given Experience:</h5>
                         <ul>
-                          <li
-                            v-for="(exp, expIndex) in helper.exp"
-                            :key="expIndex"
-                          >
+                          <li v-for="(exp, expIndex) in helper.exp" :key="expIndex">
                             {{ exp }}
                           </li>
                         </ul>
                         <h5>Contact Information:</h5>
                         <ul>
-                          <li
-                            v-for="(contactInfo, contactIndex) in helper.contact"
-                            :key="contactIndex"
-                          >
+                          <li v-for="(contactInfo, contactIndex) in helper.contact" :key="contactIndex">
                             {{ contactInfo }}
                           </li>
                         </ul>
