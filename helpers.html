@@ -76,11 +76,12 @@
         <!-- SEARCH BAR -->
         <section class="search-bar">
           <input type="text" placeholder="Search..." v-model="searchQuery" />
-          <select>
-            <option>9th grade</option>
-            <option>10th grade</option>
-            <option>11th grade</option>
-            <option>12th grade</option>
+          <select v-model="gradeFilter">
+            <option value="All">All grades</option>
+            <option value="9th">9th grade</option>
+            <option value="10th">10th grade</option>
+            <option value="11th">11th grade</option>
+            <option value="12th">12th grade</option>
           </select>
         </section>
 

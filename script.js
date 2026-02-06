@@ -13,7 +13,8 @@ const vueApp = Vue.createApp({
     return {
         services: [],
         helpers: [],
-        searchQuery: ''  // Add this
+        searchQuery: '',  // Add this
+        gradeFilter: 'All' // filter for helpers by grade; 'All' means no grade filtering
       }
   },
   computed: {
@@ -27,11 +28,23 @@ const vueApp = Vue.createApp({
 
 	// Filter helpers based on search query
     filteredHelpers() {
-      return this.helpers.filter(helper => 
-        (helper.name.first + ' ' + helper.name.last).toLowerCase().includes(this.searchQuery.toLowerCase()) ||
-        helper.blurb.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
-        helper.location.toLowerCase().includes(this.searchQuery.toLowerCase())
-      )
+      const q = this.searchQuery.trim().toLowerCase()
+      return this.helpers.filter(helper => {
+        // Grade filter
+        if (this.gradeFilter && this.gradeFilter !== 'All') {
+          if (!helper.grade || helper.grade.toLowerCase() !== this.gradeFilter.toLowerCase()) {
+            return false
+          }
+        }
+
+        const name = ((helper.name && helper.name.first) ? (helper.name.first + ' ' + (helper.name.last || '')) : '').toLowerCase()
+        const blurb = (helper.blurb || '').toLowerCase()
+        const location = (helper.location || '').toLowerCase()
+
+        if (!q) return true
+
+        return name.includes(q) || blurb.includes(q) || location.includes(q)
+      })
     }
   },
   methods: {
