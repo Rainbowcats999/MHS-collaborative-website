@@ -114,19 +114,16 @@ body {
 }
 
 /* CARD GRID */
-.infocard, .homecard {
+.infocard {
     background: #6263ad;
     border-radius: 10px;
     transition: .5s;
-    height: 100%;
-    color: aliceblue
-}
-
-.infocard {
     min-height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
+    color: aliceblue
 }
 
 .infocard:hover {
