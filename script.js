@@ -14,16 +14,40 @@ const vueApp = Vue.createApp({
         services: [],
         helpers: [],
         searchQuery: '',  // Add this
-        gradeFilter: 'All' // filter for helpers by grade; 'All' means no grade filtering
+        gradeFilter: 'All', // filter for helpers by grade; 'All' means no grade filtering
+        givingFilter: 'All' // filter services by giving type; 'All' means no giving filtering
       }
   },
   computed: {
    // Filter services based on search query
     filteredServices() {
-      return this.services.filter(service => 
-        service.title.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
-        service.blurb.toLowerCase().includes(this.searchQuery.toLowerCase())
-      )
+      const q = this.searchQuery.trim().toLowerCase()
+      return this.services.filter(service => {
+        // Giving filter: if a specific giving type is chosen, require the service to include it
+        if (this.givingFilter && this.givingFilter !== 'All') {
+          if (!service.giving || !service.giving.map(g => g.toLowerCase()).includes(this.givingFilter.toLowerCase())) {
+            return false
+          }
+        }
+
+        if (!q) return true
+
+        return (
+          (service.title && service.title.toLowerCase().includes(q)) ||
+          (service.blurb && service.blurb.toLowerCase().includes(q)) ||
+          (service.description && service.description.toLowerCase().includes(q))
+        )
+      })
+    },
+
+    givingOptions() {
+      const set = new Set()
+      this.services.forEach(svc => {
+        if (Array.isArray(svc.giving)) {
+          svc.giving.forEach(g => set.add((g || '').toString().toLowerCase()))
+        }
+      })
+      return Array.from(set).sort()
     },
 
 	// Filter helpers based on search query
@@ -99,6 +123,11 @@ const vueApp = Vue.createApp({
       }
 
       return hostsText
+    }
+
+    ,capitalize(str){
+      if(!str) return ''
+      return str.charAt(0).toUpperCase() + str.slice(1)
     }
 }
 });

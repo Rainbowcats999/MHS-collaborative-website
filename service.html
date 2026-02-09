@@ -71,11 +71,9 @@
           <button id="micButton" class="mic-button" title="Click to speak">
             🎤
           </button>
-          <select>
-            <option>Coffee for a Cause</option>
-            <option>Hillside Warehouse Volunteering</option>
-            <option>Other</option>
-            <option>More</option>
+          <select v-model="givingFilter">
+            <option value="All">All</option>
+            <option v-for="opt in givingOptions" :key="opt" :value="opt">{{ capitalize(opt) }}</option>
           </select>
         </section>
 

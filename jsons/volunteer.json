@@ -12,11 +12,12 @@
         "timeCommitment": ["6:00PM", "7:00PM"],
         "eventDate": [2026, 1, 30],
         "contact": ["Tickets", "Email"],
-        "link": ["https://www.eventbrite.com/e/coffee-for-a-cause-tickets-1980813812435", "https://www.eventbrite.com/o/3097584364?contact_organizer=true"]
+        "link": ["https://www.eventbrite.com/e/coffee-for-a-cause-tickets-1980813812435", "https://www.eventbrite.com/o/3097584364?contact_organizer=true"],
+        "giving": ["donation"]
     },
     {
         "title": "Hillside Warehouse Volunteering",
-        "titleShort": "cfac",
+        "titleShort": "hwv",
         "staff": ["Community FoodBank of New Jersey"],
         "location": "31 Evans Terminal Road, Hillside, NJ",
         "requirements": ["12+ years old", "Adult supervision for minors 12-15"],
@@ -27,6 +28,7 @@
         "timeCommitment": ["6:00PM", "7:00PM"],
         "eventDate": [2026, 2, 11],
         "contact": ["Website", "Calendar", "Facebook", "X", "Instagram", "YouTube"],
-        "link": ["https://cfbnj.org/", "https://cfbnj.volunteerhub.com/vv2/", "https://www.facebook.com/cfbnj", "https://twitter.com/cfbnj", "https://www.instagram.com/cfbnj/", "https://www.youtube.com/user/njfoodbank"]
+        "link": ["https://cfbnj.org/", "https://cfbnj.volunteerhub.com/vv2/", "https://www.facebook.com/cfbnj", "https://twitter.com/cfbnj", "https://www.instagram.com/cfbnj/", "https://www.youtube.com/user/njfoodbank"],
+        "giving": ["volunteer", "labor"]
     }
 ]
